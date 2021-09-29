@@ -15,6 +15,8 @@ import os
 
 from django.contrib import messages
 from dotenv import load_dotenv
+import os
+import django_heroku
 
 load_dotenv()
 
@@ -156,3 +158,5 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+django_heroku.settings(locals())
