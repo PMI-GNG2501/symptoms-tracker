@@ -1,0 +1,34 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+    {% load crispy_forms_tags %}
+
+    <div class="container py-5">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Notes</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for medication in medications %}
+                    <tr>
+                        <th scope="row">{{ medication.name }}</th>
+                        <td>{{ medication.notes }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="/medication/edit/{{ medication.id }}">Edit</a>
+                            <a class="btn btn-danger" href="/medication/delete/{{ medication.id }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <a href="/medication/new" class="btn btn-primary">Add New Medication</a>
+    </div>
+
+{% endblock %}

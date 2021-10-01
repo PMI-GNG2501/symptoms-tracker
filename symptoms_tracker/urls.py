@@ -20,5 +20,6 @@ urlpatterns = [
     path("", include("pages.urls")),
     path("admin/", admin.site.urls),
     path("symptoms/", include("symptoms.urls")),
-    path("users/", include("users.urls")),
+    path("accounts/", include("users.urls")),
+    path("medication/", include("medication.urls"))
 ]

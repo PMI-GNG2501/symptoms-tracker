@@ -42,8 +42,11 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.info(request, f"You are now logged in as {username}.")
-                return redirect("/")
+                messages.info(request, f"You are now logged in as {user.name}.")
+                if request.GET.get('next') is not None:
+                    return redirect(request.GET.get('next'))
+                else:
+                    return redirect("/")
             else:
                 messages.error(request, "Invalid username or password.")
         else:
@@ -75,7 +78,7 @@ def password_reset_request(request):
                     email_template_name = "users/password/password_reset_email.txt"
                     c = {
                         "email": user.email,
-                        "domain": "127.0.0.1:8000",
+                        "domain": "https://pmi-seg2501.herokuapp.com/",
                         "site_name": "Website",
                         "uid": urlsafe_base64_encode(force_bytes(user.pk)),
                         "user": user,
@@ -93,7 +96,7 @@ def password_reset_request(request):
                         )
                     except BadHeaderError:
                         return HttpResponse("Invalid header found.")
-                    return redirect("/users/password_reset/done/")
+                    return redirect("/accounts/password_reset/done/")
     password_reset_form = PasswordResetForm()
     return render(
         request=request,
