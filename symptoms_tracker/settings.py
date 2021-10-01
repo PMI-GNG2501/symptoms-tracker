@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     "symptoms",
     "users",
     "pages",
-    "medication"
+    "medication",
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -159,5 +159,5 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 django_heroku.settings(locals())

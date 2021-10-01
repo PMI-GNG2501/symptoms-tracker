@@ -1,0 +1,33 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+    <div class="container py-5">
+        <form method="POST" action="/symptoms/update/{{symptom.id}}">
+            {% csrf_token %}
+            <div class="container">
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <h3>Edit symptoms</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Message</label>
+                    <div class="col-sm-4">
+                        <textarea class="form-control" name="message">{{ symptom.message }}</textarea>
+                    </div>
+                </div>
+                <br>
+                <select class="form-select" name="medication" multiple aria-label="multiple select example">
+                    {% for medication in medications %}
+                        <option value="{{ medication.id }}" {% if medication.id in medication_list %}selected{% endif %}>{{ medication.name }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <button class="btn btn-primary" type="submit">Edit Medication</button>
+            </div>
+
+        </form>
+    </div>
+
+{% endblock %}

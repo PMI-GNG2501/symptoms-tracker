@@ -6,4 +6,4 @@ class MedicationForm(ModelForm):
     class Meta:
         model = Medication
         fields = "__all__"
-        required = ('name', 'user')
+        required = ("name", "user")

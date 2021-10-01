@@ -1,0 +1,40 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+    {% load crispy_forms_tags %}
+
+    <div class="container py-5">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Symptom</th>
+                    <th scope="col">Medications</th>
+                    <th scope="col">Date/Time</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for symptom in symptoms %}
+                    <tr>
+                        <th scope="row">{{ symptom.message }}</th>
+                        <td>
+                            {% for med in symptom.medication.all %}
+                                <ul>{{ med.name }}</ul>
+                            {% endfor %}
+                        </td>
+                        <td>{{ symptom.datetime }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="/symptoms/edit/{{ symptom.id }}">Edit</a>
+                            <a class="btn btn-danger" href="/symptoms/delete/{{ symptom.id }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <a href="/symptoms/new" class="btn btn-primary">Add New Symptoms</a>
+    </div>
+
+{% endblock %}

@@ -21,7 +21,6 @@ def signup_view(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful.")
-            print("Completed")
             return redirect("/")
         messages.error(request, "Unsuccessful registration. Invalid information.")
     else:
@@ -43,8 +42,8 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {user.name}.")
-                if request.GET.get('next') is not None:
-                    return redirect(request.GET.get('next'))
+                if request.GET.get("next") is not None:
+                    return redirect(request.GET.get("next"))
                 else:
                     return redirect("/")
             else:
