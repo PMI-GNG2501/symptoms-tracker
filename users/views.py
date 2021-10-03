@@ -77,7 +77,7 @@ def password_reset_request(request):
                     email_template_name = "users/password/password_reset_email.txt"
                     c = {
                         "email": user.email,
-                        "domain": "https://pmi-seg2501.herokuapp.com/",
+                        "domain": "pmi-seg2501.herokuapp.com",
                         "site_name": "Website",
                         "uid": urlsafe_base64_encode(force_bytes(user.pk)),
                         "user": user,
@@ -89,7 +89,7 @@ def password_reset_request(request):
                         send_mail(
                             subject,
                             email,
-                            "admin@example.com",
+                            "afeti047@uottawa.ca",
                             [user.email],
                             fail_silently=False,
                         )

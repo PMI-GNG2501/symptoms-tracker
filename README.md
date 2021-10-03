@@ -12,15 +12,18 @@ Ce projet fait en Python (Avec Django), permet de prendre en note les symptomes 
     ├── users                   # Système de création et de connection de compte
     ├── .gitignore              # Fichier pour ignorer des fichiers de git
     ├── manage.py               # Fichier Django pour effectuer une liste d'action
-    ├── README.md  
-    └── requirements.txt
+    ├── Procile                 # Fichier de configuration serveur  
+    ├── README.md               # Ce fichier :)
+    └── requirements.txt        # Fichier de dépendances Python
 
 ## Dépendences Python
-- python3
 - Django
+- python-dotenv=
 - django-crispy-forms
 - psycopg2
-- python-dotenv
+- gunicorn
+- django-heroku
+- django-rq
 - rq-scheduler
 
 ## Conventions
@@ -31,12 +34,21 @@ Ce projet fait en Python (Avec Django), permet de prendre en note les symptomes 
 ## Demarrage de l'application
 1) Installation de [Python 3](https://www.python.org/downloads/) (Python 3.8 ou + recommandé)
 2) Installation de [PIP](https://pip.pypa.io/en/stable/installation/)
-3) Création d'une base de donnée PostgresSQL (Ou utilisation d'une base de donnée PostgreSQL existante)
+3) **(FA2: Vous pouvez sauter cette étape)** Création d'une base de donnée PostgresSQL (Ou utilisation d'une base de donnée PostgreSQL existante)
 4) Cloner le dépôt Github
+```bash
+git clone https://github.com/PMI-GNG2501/symptoms-tracker
+```
 5) Ajout de toutes les dépendances avec :
 ```bash
 pip install -r requirements.txt
 ```
+6) Ajouter le fichier .env pour les mots de passes dans le dossier symptoms_tracker/.env (fichier privé, demandez à Arthur pour l'avoir)
+7) Lancez le serveur avec la commande
+```bash
+python manage.py runserver
+```
+8) Dirigez vous sur le site : [http://localhost:8000/](http://localhost:8000/)
 
 ## Deploiement
 Le deploiement est automatique dès que quelque chose est envoyé sur la branche "main" sur Github. Celui-ci sera automatiquement deployé sur Heroku.
