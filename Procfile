@@ -1,4 +1,3 @@
 release: python manage.py migrate --no-input
-worker: python manage.py rqworker high
-rqscheduler: python manage.py rqscheduler --queue high
+worker: python manage.py rqworker high & python manage.py rqscheduler --queue default
 web: gunicorn symptoms_tracker.wsgi
