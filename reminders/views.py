@@ -1,3 +1,5 @@
+import os
+
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 import datetime
@@ -10,7 +12,7 @@ from medication.models import Medication
 from reminders.models import Reminder
 from reminders.forms import RemindersForm
 
-scheduler = django_rq.get_scheduler("default")
+scheduler = django_rq.get_scheduler(os.getenv("REDIS_QUEUE", "high"))
 
 
 @login_required
