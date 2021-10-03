@@ -45,22 +45,24 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_rq",
     "crispy_forms",
     "symptoms",
     "users",
+    "reminders",
     "pages",
     "medication",
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 # Sendgrid
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-# EMAIL_HOST_PASSWORD = os.getenv('SENDGRID_API_KEY')
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.sendgrid.net"
+EMAIL_HOST_USER = "apikey"  # this is exactly the value 'apikey'
+EMAIL_HOST_PASSWORD = os.getenv("SENDGRID_API_KEY")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -115,6 +117,34 @@ DATABASES = {
     }
 }
 
+RQ_QUEUES = {
+    "default": {
+        "HOST": "localhost",
+        "PORT": 6379,
+        "DB": 0,
+        "DEFAULT_TIMEOUT": 500,
+    },
+    "with-sentinel": {
+        "SENTINELS": [("localhost", 26736), ("localhost", 26737)],
+        "MASTER_NAME": "redismaster",
+        "DB": 0,
+        "PASSWORD": "secret",
+        "SOCKET_TIMEOUT": None,
+        "CONNECTION_KWARGS": {"socket_connect_timeout": 0.3},
+    },
+    "high": {
+        "URL": os.getenv(
+            "REDIS_URL", "redis://localhost:6379/0"
+        ),  # If you're on Heroku
+        "DEFAULT_TIMEOUT": 500,
+    },
+    "low": {
+        "HOST": "localhost",
+        "PORT": 6379,
+        "DB": 0,
+    },
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -141,14 +171,15 @@ AUTH_USER_MODEL = "users.User"
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Toronto"
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
+TIME_INPUT_FORMATS = ("%H:%M",)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

@@ -4,3 +4,5 @@ django-crispy-forms
 psycopg2
 gunicorn
 django-heroku
+django-rq
+rq-scheduler

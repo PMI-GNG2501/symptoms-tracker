@@ -21,6 +21,7 @@ Ce projet fait en Python (Avec Django), permet de prendre en note les symptomes 
 - django-crispy-forms
 - psycopg2
 - python-dotenv
+- rq-scheduler
 
 ## Conventions
 

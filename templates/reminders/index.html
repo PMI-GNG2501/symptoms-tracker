@@ -1,0 +1,40 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+    {% load crispy_forms_tags %}
+
+    <div class="container py-5">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Medication List</th>
+                    <th scope="col">Notes</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for reminder in reminders %}
+                    <tr>
+                        <th scope="row">{{ reminder.time|time:"H:i" }}</th>
+                        <td>
+                            {% for med in reminder.medication.all %}
+                                <ul>{{ med.name }}</ul>
+                            {% endfor %}
+                        </td>
+                        <td>{{ reminder.notes }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="/reminders/edit/{{ reminder.id }}">Edit</a>
+                            <a class="btn btn-danger" href="/reminders/delete/{{ reminder.id }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <a href="/reminders/new" class="btn btn-primary">Add a new reminder</a>
+    </div>
+
+{% endblock %}

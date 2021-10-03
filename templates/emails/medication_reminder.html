@@ -1,0 +1,8 @@
+Hello {{ user.name }},
+
+You have these medications to take:
+{% for medication in medications %}
+- {{ medication.name }}
+{% endfor %}
+Thanks,
+PMI

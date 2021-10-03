@@ -1,0 +1,40 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+    <div class="container py-5">
+        <form method="POST" action="/reminders/update/{{reminder.id}}">
+            {% csrf_token %}
+            <div class="container">
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <h3>Edit the reminder</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Remind me at</label>
+                    <div class="col-sm-4">
+                        <input type="time" class="form-control" name="time" value="{{ reminder.time|time:"H:i" }}"/>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Notes</label>
+                    <div class="col-sm-4">
+                        <textarea class="form-control" name="notes">{{ reminder.notes }}</textarea>
+                    </div>
+                </div>
+                <br>
+                <select class="form-select" name="medication" multiple aria-label="multiple select example">
+                    {% for medication in medications %}
+                        <option value="{{ medication.id }}" {% if medication.id in medication_list %}selected{% endif %}>{{ medication.name }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <button class="btn btn-primary" type="submit">Edit the reminder</button>
+            </div>
+
+        </form>
+    </div>
+
+{% endblock %}

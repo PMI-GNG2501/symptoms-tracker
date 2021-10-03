@@ -18,7 +18,7 @@ def index(request):
 def new(request):
     if request.method == "POST":
         updated_form = request.POST.copy()
-        updated_form.update({'user': request.user, 'datetime': datetime.now()})
+        updated_form.update({"user": request.user, "datetime": datetime.now()})
         form = SymptomsForm(updated_form)
         if form.is_valid():
             try:
@@ -35,22 +35,38 @@ def new(request):
 def edit(request, id):
     symptom = Symptoms.objects.get(id=id)
     medications = Medication.objects.all().filter(user=request.user)
-    medication_list = symptom.medication.all().values_list('id', flat=True)
-    return render(request, "symptoms/edit.html", {"symptom": symptom, "medications": medications, 'medication_list': medication_list})
+    medication_list = symptom.medication.all().values_list("id", flat=True)
+    return render(
+        request,
+        "symptoms/edit.html",
+        {
+            "symptom": symptom,
+            "medications": medications,
+            "medication_list": medication_list,
+        },
+    )
 
 
 @login_required
 def update(request, id):
     symptom = Symptoms.objects.get(id=id)
     updated_form = request.POST.copy()
-    updated_form.update({'user': symptom.user, 'datetime': symptom.datetime})
+    updated_form.update({"user": symptom.user, "datetime": symptom.datetime})
     form = SymptomsForm(updated_form, instance=symptom)
     if form.is_valid():
         form.save()
         return redirect("/symptoms")
     medications = Medication.objects.all().filter(user=request.user)
-    medication_list = symptom.medication.all().values_list('id', flat=True)
-    return render(request, "symptoms/edit.html", {"symptom": symptom, "medications": medications, 'medication_list': medication_list})
+    medication_list = symptom.medication.all().values_list("id", flat=True)
+    return render(
+        request,
+        "symptoms/edit.html",
+        {
+            "symptom": symptom,
+            "medications": medications,
+            "medication_list": medication_list,
+        },
+    )
 
 
 @login_required
