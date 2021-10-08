@@ -16,22 +16,22 @@ div.LeftFeat {
 }
 
 div.calPic {
-  width: 150px;
-  height: 150px;
+  width: 10px;
+  height: 10px;
   border-radius: 20px;
   box-shadow: 5%;
 }
 
 div.medPic {
-  width: 150px;
-  height: 150px;
+  width: 10px;
+  height: 10px;
   border-radius: 20px;
   box-shadow: 5%;
 }
 
 div.symPic {
-  width: 150px;
-  height: 150px;
+  width: 10px;
+  height: 10px;
   border-radius: 20px;
   box-shadow: 5%;
 }
