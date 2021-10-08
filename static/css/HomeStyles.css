@@ -15,21 +15,21 @@ div.LeftFeat {
   /*border-image: 20cm;*/
 }
 
-div.calPic {
+.calPic {
   width: 10px;
   height: 10px;
   border-radius: 20px;
   box-shadow: 5%;
 }
 
-div.medPic {
+.medPic {
   width: 10px;
   height: 10px;
   border-radius: 20px;
   box-shadow: 5%;
 }
 
-div.symPic {
+.symPic {
   width: 10px;
   height: 10px;
   border-radius: 20px;
