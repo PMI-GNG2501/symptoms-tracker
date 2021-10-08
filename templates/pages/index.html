@@ -1,1 +1,71 @@
-{% extends "layouts/layout.html" %}
+{% extends "layouts/layout.html" %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMI</title>
+    <link rel="stylesheet" href="HomeStyles.css" />
+    <style></style>
+  </head>
+  <body>
+<div class="Features&Fonctiannalities">
+  <div class="RightFeat">
+    <h1>Calendar</h1>
+    <p class="CalSent">
+      /*calendar sentence*/ With our calendar, be on point to your medical and
+      therapy appointments and most importantly, you won't forget to take your
+      medication.
+    </p>
+    <img src="/static/Calendar.jpg" class="calPic" />
+  </div>
+
+  <div class="LeftFeat">
+    <h1>Medication</h1>
+    <p class="PillsPhrase">
+      /*calendar sentence*/ Organize your all your medication by adding new ones
+      or removing old pills that you don't use.
+    </p>
+    <img src="/static/Pills.jpg" class="medPic" />
+  </div>
+
+  <div class="RightFeat">
+    <h1>Symptoms Tracker</h1>
+    <p>
+      Track your symptoms when ever you want and where ever you are. You'll be
+      able to have a list of your symptoms that you had during the day.
+    </p>
+    <img src="/static/symptoms.jpg" class="symPic" />
+  </div>
+
+  <div class="LeftFeat">
+    <h1>PDF's</h1>
+    <p style="right: auto">
+      Create PDF files of your medications, appointments, symptomsthat you had
+      during the day and send them to your health practician.
+    </p>
+  </div>
+
+  <div class="RightFeat">
+    <h1>FAQ</h1>
+    <p>
+      In case you face technical difficulties our team will alwys be there to
+      assist you to provide a better customer service.
+    </p>
+  </div>
+
+  <div class="LeftFeat">
+    <h1>About Us</h1>
+    <p>
+      <!--sentence-->
+      We are a young team of students, chasing our dreams. This website shows
+      our passion for creating something new but also to help make peoples life
+      better.
+    </p>
+  </div>
+</div>
+<body>
+</html>
+
+{% endblock content %}

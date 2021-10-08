@@ -1,0 +1,37 @@
+body {
+  background-color: #f4ceff;
+}
+
+div.RightFeat {
+  border: cover;
+  background-color: azure;
+  font-size: 120%;
+  /* border-image: 20cm;*/
+}
+
+div.LeftFeat {
+  background-color: white;
+  font-size: 120%;
+  /*border-image: 20cm;*/
+}
+
+div.calPic {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 5%;
+}
+
+div.medPic {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 5%;
+}
+
+div.symPic {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 5%;
+}
