@@ -1,27 +1,27 @@
-{% extends "layouts/layout.html" %}
-{% load static %}
+{% extends "layouts/layout.html" %} {% load static %} {% block content %}
 
-{% block content %}
-
-
-<link rel="stylesheet" type="text/css" href="{% static 'css/HomeStyles.css' %}">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/HomeStyles.css' %}"
+/>
 
 <div class="Features&Fonctiannalities">
   <div class="RightFeat">
     <h1>Calendar</h1>
     <p class="CalSent">
-      With our calendar, be on point to your medical and
-      therapy appointments and most importantly, you won't forget to take your
-      medication.
+      With our calendar, be on point to your medical and therapy appointments
+      and most importantly, you won't forget to take your medication.
     </p>
-    {% load static %}<img src="{% static 'Calendar.jpg' %}" class="calPic" />
+    {% load static %}<img src="{% static 'Calendar.jpg' %}" class="calPic"
+    width: 10px; height: 10px;/>
   </div>
 
   <div class="LeftFeat">
     <h1>Medication</h1>
     <p class="PillsPhrase">
-      Organize your all your medication by adding new ones
-      or removing old pills that you don't use.
+      Organize your all your medication by adding new ones or removing old pills
+      that you don't use.
     </p>
     <img src="{% static 'Pills.jpg' %}" class="medPic" />
   </div>
