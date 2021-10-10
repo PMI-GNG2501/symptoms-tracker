@@ -2,36 +2,43 @@ body {
   background-color: #f4ceff;
 }
 
+/*Every RightFeat element*/
 div.RightFeat {
+  font-family: "Raleway", sans-serif;
   border: cover;
   background-color: azure;
   font-size: 120%;
   /* border-image: 20cm;*/
 }
 
+/*Every LeftFeat element*/
 div.LeftFeat {
+  font-family: "Raleway", sans-serif;
   background-color: white;
   font-size: 120%;
   /*border-image: 20cm;*/
 }
 
+/*styles for texts or paragraphs*/
+
+/*Styles for the pictures*/
 .calPic {
-  width: 10px;
-  height: 10px;
+  width: 200px;
+  height: 200px;
   border-radius: 20px;
   box-shadow: 5%;
 }
 
 .medPic {
-  width: 10px;
-  height: 10px;
+  width: 200px;
+  height: 200px;
   border-radius: 20px;
   box-shadow: 5%;
 }
 
 .symPic {
-  width: 10px;
-  height: 10px;
+  width: 200px;
+  height: 200px;
   border-radius: 20px;
   box-shadow: 5%;
 }
