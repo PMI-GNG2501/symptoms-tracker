@@ -4,7 +4,11 @@
     {% load crispy_forms_tags %}
 
     <div class="container py-5">
-        <div class="table-responsive">
+        <h1 class="pb-2">My Reminders</h1>
+
+        <a href="/reminders/new" class="btn btn-primary">Add a New Reminder</a>
+
+        <div class="table-responsive pt-3">
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -33,8 +37,6 @@
                 </tbody>
             </table>
         </div>
-        <br>
-        <a href="/reminders/new" class="btn btn-primary">Add a new reminder</a>
     </div>
 
 {% endblock %}

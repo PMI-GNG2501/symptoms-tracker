@@ -1,0 +1,40 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+    <div class="container py-5">
+        <form method="POST" action="/therapies/update/{{therapy.id}}">
+            {% csrf_token %}
+            <div class="container">
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <h3>Edit Therapy Details</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Name of therapy</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="name" required value="{{ therapy.name }}" />
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Therapy Date</label>
+                    <div class="col-sm-4">
+                        <input type="datetime-local" class="form-control" name="datetime" required value="{{ therapy.datetime|date:"Y-m-d" }}T{{ therapy.datetime|time:"H:i" }}" />
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Comments</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="comments" value="{{ therapy.comments }}" />
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit">Edit Therapy</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

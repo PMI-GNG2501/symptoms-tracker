@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Symptoms Summary</title>
+</head>
+<body>
+  <h1>Symptoms Summary</h1>
+  <h2>For patient: {{ name }}</h2>
+  {% for symptom in symptoms %}
+    <p>
+        Date: {{ symptom.datetime }}
+        <br>
+        Symptoms: {{ symptom.message }}
+        <br>
+        Medication taken:
+        {% if symptom.medication.count > 0 %}
+            {% for med in symptom.medication.all %}
+                <ul>{{ med.name }}</ul>
+            {% endfor %}
+        {% else %}
+            <ul>None</ul>
+        {% endif %}
+
+    </p>
+    <br>
+  {% endfor %}
+</body>
+</html>

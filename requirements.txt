@@ -6,3 +6,4 @@ gunicorn
 django-heroku
 django-rq
 rq-scheduler
+weasyprint

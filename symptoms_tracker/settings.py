@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "reminders",
     "pages",
     "medication",
+    "therapies"
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"

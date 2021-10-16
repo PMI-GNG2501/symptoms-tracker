@@ -4,11 +4,17 @@
     {% load crispy_forms_tags %}
 
     <div class="container py-5">
-        <div class="table-responsive">
+
+        <h1 class="pb-2">My symptoms</h1>
+
+        <a href="/symptoms/new" class="btn btn-primary">Add New Symptoms</a>
+        <a href="/symptoms/generate_pdf" class="btn btn-primary">Generate 30 day summary</a>
+
+        <div class="table-responsive pt-3">
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th scope="col">Symptom</th>
+                    <th scope="col">Symptom(s)</th>
                     <th scope="col">Medications</th>
                     <th scope="col">Date/Time</th>
                     <th scope="col">Actions</th>
@@ -33,8 +39,6 @@
                 </tbody>
             </table>
         </div>
-        <br>
-        <a href="/symptoms/new" class="btn btn-primary">Add New Symptoms</a>
     </div>
 
 {% endblock %}

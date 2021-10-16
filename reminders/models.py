@@ -5,6 +5,8 @@ from users.models import User
 
 
 class Reminder(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     time = models.TimeField()
     notes = models.TextField(blank=True)
     medication = models.ManyToManyField(Medication)

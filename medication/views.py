@@ -6,7 +6,7 @@ from medication.forms import MedicationForm
 
 @login_required
 def index(request):
-    medications = Medication.objects.all()
+    medications = Medication.objects.all().filter(user_id=request.user.id)
     return render(request, "medication/index.html", {"medications": medications})
 
 

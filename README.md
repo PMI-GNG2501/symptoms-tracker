@@ -25,6 +25,7 @@ Ce projet fait en Python (Avec Django), permet de prendre en note les symptomes 
 - django-heroku
 - django-rq
 - rq-scheduler
+- weasyprint
 
 ## Conventions
 
@@ -56,7 +57,6 @@ Le deploiement est automatique dès que quelque chose est envoyé sur la branche
 ## Auteurs
 - [Arthur Fétiveau](https://github.com/art29)
 - [Ayanna Levert-Westmacott](https://github.com/YOURUSERNAME)
-- [Ghita Dounia](https://github.com/YOURUSERNAME)
 - [Hossein Hajmirbaba](https://github.com/YOURUSERNAME)
 - [Jean-Gabriel De Montigny](https://github.com/YOURUSERNAME)
 - [Nicholas Turbide](https://github.com/YOURUSERNAME)

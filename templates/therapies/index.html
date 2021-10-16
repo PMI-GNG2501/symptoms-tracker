@@ -5,27 +5,29 @@
 
     <div class="container py-5">
 
-        <h1 class="pb-2">My medication</h1>
+        <h1 class="pb-2">My therapies</h1>
 
-        <a href="/medication/new" class="btn btn-primary">Add New Medication</a>
+        <a href="/therapies/new" class="btn btn-primary">Add a new Therapy</a>
 
         <div class="table-responsive pt-3">
             <table class="table table-striped">
                 <thead>
                 <tr>
                     <th scope="col">Name</th>
+                    <th scope="col">Date/Time</th>
                     <th scope="col">Notes</th>
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                {% for medication in medications %}
+                {% for therapy in therapies %}
                     <tr>
-                        <th scope="row">{{ medication.name }}</th>
-                        <td>{{ medication.notes }}</td>
+                        <th scope="row">{{ therapy.name }}</th>
+                        <td>{{ therapy.datetime }}</td>
+                        <td>{{ therapy.comments }}</td>
                         <td>
-                            <a class="btn btn-primary" href="/medication/edit/{{ medication.id }}">Edit</a>
-                            <a class="btn btn-danger" href="/medication/delete/{{ medication.id }}">Delete</a>
+                            <a class="btn btn-primary" href="/therapies/edit/{{ therapy.id }}">Edit</a>
+                            <a class="btn btn-danger" href="/therapies/delete/{{ therapy.id }}">Delete</a>
                         </td>
                     </tr>
                 {% endfor %}

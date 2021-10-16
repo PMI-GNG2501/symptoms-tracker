@@ -17,7 +17,7 @@ scheduler = django_rq.get_scheduler(os.getenv("REDIS_QUEUE", "high"))
 
 @login_required
 def index(request):
-    reminders = Reminder.objects.all()
+    reminders = Reminder.objects.all().filter(user_id=request.user.id)
     return render(request, "reminders/index.html", {"reminders": reminders})
 
 

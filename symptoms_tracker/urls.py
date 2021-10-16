@@ -25,5 +25,6 @@ urlpatterns = [
     path("accounts/", include("users.urls")),
     path("medication/", include("medication.urls")),
     path("reminders/", include("reminders.urls")),
+    path("therapies/", include("therapies.urls")),
     path("django-rq/", include("django_rq.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
