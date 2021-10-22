@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "reminders",
     "pages",
     "medication",
+    "medication_log",
     "therapies"
 ]
 

@@ -21,7 +21,23 @@
         {% endif %}
 
     </p>
-    <br>
+  {% endfor %}
+
+  <h2>Other taken medications</h2>
+
+  {% for medication_log in medication_logs %}
+    <p>
+        Date: {{ medication_log.datetime }}
+        <br>
+        Medication taken:
+        {% if medication_log.medication.count > 0 %}
+            {% for med in medication_log.medication.all %}
+                <ul>{{ med.name }}</ul>
+            {% endfor %}
+        {% else %}
+            <ul>None</ul>
+        {% endif %}
+    </p>
   {% endfor %}
 </body>
 </html>

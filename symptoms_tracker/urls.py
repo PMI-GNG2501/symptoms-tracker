@@ -24,6 +24,7 @@ urlpatterns = [
     path("symptoms/", include("symptoms.urls")),
     path("accounts/", include("users.urls")),
     path("medication/", include("medication.urls")),
+    path("medication_log/", include("medication_log.urls")),
     path("reminders/", include("reminders.urls")),
     path("therapies/", include("therapies.urls")),
     path("django-rq/", include("django_rq.urls")),

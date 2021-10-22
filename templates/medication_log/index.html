@@ -1,0 +1,45 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+    {% load crispy_forms_tags %}
+
+    <div class="container py-5">
+
+        <h1 class="pb-2">Medication Token</h1>
+
+        <a href="/medication_log/new" class="btn btn-primary">Add a taken medication</a>
+
+        <div class="table-responsive pt-3">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Date/Time</th>
+                    <th scope="col">Medication List</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for medication_log in medication_logs %}
+                    <tr>
+                        <th scope="row">{{ medication_log.datetime }}</th>
+                        <td>
+                            {% if medication_log.medication.count > 0 %}
+                                {% for med in medication_log.medication.all %}
+                                    <ul>{{ med.name }}</ul>
+                                {% endfor %}
+                            {% else %}
+                                <ul>None</ul>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" href="/medication_log/edit/{{ medication_log.id }}">Edit</a>
+                            <a class="btn btn-danger" href="/medication_log/delete/{{ medication_log.id }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

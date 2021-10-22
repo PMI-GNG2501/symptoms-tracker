@@ -1,16 +1,19 @@
 import os
+from django.http import JsonResponse
+from datetime import timedelta, date
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-import datetime
-from datetime import timezone
+from datetime import timezone, datetime, timedelta
 import django_rq
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 
 from medication.models import Medication
+from medication_log.models import MedicationLog
 from reminders.models import Reminder
 from reminders.forms import RemindersForm
+from therapies.models import Therapies
 
 scheduler = django_rq.get_scheduler(os.getenv("REDIS_QUEUE", "high"))
 
@@ -89,15 +92,50 @@ def destroy(request, id):
     return redirect("/reminders")
 
 
-def setup_scheduler(time, reminder_id):
-    local_datetime = datetime.datetime.strptime(time, "%H:%M")
+@login_required
+def calendar(request):
+    return render(
+        request,
+        "reminders/calendar.html",
+    )
 
-    time = datetime.datetime.now().replace(
+
+@login_required
+def calendar_info(request):
+    events = []
+
+    # Medication to take
+    reminders = Reminder.objects.all().filter(user_id=request.user.id)
+    for reminder in reminders:
+        event = {}
+        medication_list = list(reminder.medication.all().values_list("name", flat=True))
+        event['title'] = "Take " + ', '.join(str(p) for p in medication_list)
+        event['daysOfWeek'] = [0, 1, 2, 3, 4, 5, 6]
+        event['startTime'] = reminder.time.strftime("%H:%M:%S")
+        event['endTime'] = (datetime.combine(date.today(), reminder.time) + timedelta(minutes=15)).strftime("%H:%M:%S")
+        events.append(event)
+
+    # Therapy
+    therapies = Therapies.objects.all().filter(user_id=request.user.id)
+    for therapy in therapies:
+        event = {}
+        event['title'] = therapy.name
+        event['start'] = therapy.datetime.strftime("%Y-%m-%dT%H:%M:%S")
+        event['end'] = (therapy.datetime + timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%S")
+        events.append(event)
+
+    return JsonResponse(events, safe=False)
+
+
+def setup_scheduler(time, reminder_id):
+    local_datetime = datetime.strptime(time, "%H:%M")
+
+    time = datetime.now().replace(
         hour=local_datetime.hour, minute=local_datetime.minute, second=0, microsecond=0
     )
 
-    if datetime.datetime.now() > time:
-        time = time + datetime.timedelta(days=1)
+    if datetime.now() > time:
+        time = time + timedelta(days=1)
 
     utc_time = time.astimezone(timezone.utc)
 
@@ -117,6 +155,9 @@ def send_reminder(reminder_id: int):
     from django.core.mail import send_mail
 
     reminder = Reminder.objects.get(id=reminder_id)
+    medication_log = MedicationLog(user=reminder.user, datetime=datetime.now())
+    medication_log.save()
+    medication_log.medication.add(*reminder.medication.all())
 
     html_message = render_to_string('emails/medication_reminder.html', {'user': reminder.user, 'medications': reminder.medication.all})
     plain_message = strip_tags(html_message)

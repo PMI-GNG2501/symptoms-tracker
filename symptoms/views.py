@@ -10,6 +10,7 @@ from weasyprint import HTML
 from datetime import datetime, timedelta
 
 from medication.models import Medication
+from medication_log.models import MedicationLog
 from symptoms.models import Symptoms
 from symptoms.forms import SymptomsForm
 
@@ -24,7 +25,7 @@ def index(request):
 def new(request):
     if request.method == "POST":
         updated_form = request.POST.copy()
-        updated_form.update({"user": request.user, "datetime": datetime.now()})
+        updated_form.update({"user": request.user})
         form = SymptomsForm(updated_form)
         if form.is_valid():
             try:
@@ -34,7 +35,7 @@ def new(request):
                 print(e)
                 print("error")
     medications = Medication.objects.all().filter(user=request.user)
-    return render(request, "symptoms/new.html", {"medications": medications})
+    return render(request, "symptoms/new.html", {"medications": medications, "datetime": datetime.now()})
 
 
 @login_required
@@ -84,8 +85,9 @@ def destroy(request, id):
 
 def generate_pdf(request):
     symptoms = Symptoms.objects.all().filter(user_id=request.user.id).filter(created_at__range=(datetime.today() - timedelta(days=30), datetime.today() + timedelta(days=1)))
+    medication_logs = MedicationLog.objects.all().filter(user_id=request.user.id).filter(created_at__range=(datetime.today() - timedelta(days=30), datetime.today() + timedelta(days=1)))
 
-    html_string = render_to_string('pdf/symptoms_summary.html', {'symptoms': symptoms, 'name': request.user.name})
+    html_string = render_to_string('pdf/symptoms_summary.html', {'symptoms': symptoms, 'medication_logs': medication_logs, 'name': request.user.name})
 
     html = HTML(string=html_string)
     html.write_pdf(target='/tmp/symptoms_summary.pdf');
