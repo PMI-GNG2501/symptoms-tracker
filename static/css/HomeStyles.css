@@ -19,6 +19,12 @@ div.LeftFeat {
   /*border-image: 20cm;*/
 }
 
+/*Styles for List items*/
+li.nav-item{
+  text-align: right;
+}
+
+
 /*styles for texts or paragraphs*/
 
 /*Styles for the pictures*/

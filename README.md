@@ -59,4 +59,4 @@ Le deploiement est automatique dès que quelque chose est envoyé sur la branche
 - [Ayanna Levert-Westmacott](https://github.com/YOURUSERNAME)
 - [Hossein Hajmirbaba](https://github.com/YOURUSERNAME)
 - [Jean-Gabriel De Montigny](https://github.com/YOURUSERNAME)
-- [Nicholas Turbide](https://github.com/YOURUSERNAME)
+- [Nicholas Turbide](https://github.com/NicholasTurbide)
