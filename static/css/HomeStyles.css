@@ -18,26 +18,35 @@ div.LeftFeat {
   font-size: 120%;
   /*border-image: 20cm;*/
 }
-
 /*Grid Layout*/
-div.FeaturesAndFonctianalities {
+div.FeaturesAndFunctionalities{
   display: grid;
 }
-div.RightFeat {
+div.RightFeat{
+  
 }
+
+
+
 /*styles for texts or paragraphs*/
 
+.FAQ-H1{
+  text-align: center;
+
+}
 /*Styles for the pictures*/
 .calPic {
   width: 200px;
   height: 200px;
   border-radius: 20px;
+  box-shadow: 5%;
 }
 
 .medPic {
   width: 200px;
   height: 200px;
   border-radius: 20px;
+  box-shadow: 5%;
 }
 
 .symPic {
