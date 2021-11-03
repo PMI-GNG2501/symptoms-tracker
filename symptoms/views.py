@@ -5,8 +5,10 @@ from django.shortcuts import render, redirect
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
 from django.template.loader import render_to_string
+import platform
 
-from weasyprint import HTML
+if platform.system() != "Windows":
+    from weasyprint import HTML
 from datetime import datetime, timedelta
 
 from medication.models import Medication
