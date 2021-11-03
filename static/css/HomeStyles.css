@@ -19,6 +19,12 @@ div.LeftFeat {
   /*border-image: 20cm;*/
 }
 
+/*Grid Layout*/
+div.FeaturesAndFonctianalities {
+  display: grid;
+}
+div.RightFeat {
+}
 /*styles for texts or paragraphs*/
 
 /*Styles for the pictures*/
@@ -26,14 +32,12 @@ div.LeftFeat {
   width: 200px;
   height: 200px;
   border-radius: 20px;
-  box-shadow: 5%;
 }
 
 .medPic {
   width: 200px;
   height: 200px;
   border-radius: 20px;
-  box-shadow: 5%;
 }
 
 .symPic {
