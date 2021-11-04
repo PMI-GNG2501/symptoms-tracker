@@ -30,31 +30,6 @@ div.RightFeat{
 
 /*styles for texts or paragraphs*/
 
-.FAQ-H1{
-  text-align: center;
-
-}
-
-.FAQ-Searchbar{
-  text-align: center;  
-}
-
-.FAQ-Searchbar .input{
-  width: 30%;
-  padding: 10px 10px;
-  border:none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.FAQ-Searchbar .searchbar{
-  margin:0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
-  cursor: pointer;
-}
 
 
 /*Styles for the pictures*/
@@ -77,4 +52,84 @@ div.RightFeat{
   height: 200px;
   border-radius: 20px;
   box-shadow: 5%;
+}
+
+/*FAQ Section*/
+.RightFeat .FAQ-H1{
+  text-align: center;
+}
+
+.RightFeat .FAQ-Searchbar{
+  text-align: center;  
+}
+
+.RightFeat .FAQ-Searchbar .input{
+  width: 30%;
+  padding: 10px 10px;
+  border:none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.RightFeat .FAQ-Searchbar .searchbar{
+  margin:0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+}
+
+.RightFeat .FAQ-questions{
+  align-items: center;
+}
+
+.RightFeat .FAQ-questions .Question-Category{
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0.5rem, 2px, 0.5rem rgba(0,0,0,0.1);
+}
+
+.question{
+  font-size: 1.6rem;
+  color:black;
+  text-decoration: none;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem, 0;
+}
+
+.question .ion-icon{
+  color: black;
+  padding:5px;
+}
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+}
+
+.answer::before{
+  content:"";
+  position: absolute;
+  width: 0.6rem;
+  height: 90%;
+  top: 50%;
+  left:0px;
+  transform: translatey(-50%);
+}
+
+.answer p{
+  font-size: 14px;
+  color: black;
+  padding:2rem;
+}
+
+.question:target .answer{
+  max-height: 20rem;
 }
