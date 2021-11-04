@@ -170,3 +170,7 @@ div.RightFeat{
   display: block;
 }
 
+.fc .fc-timegrid-slots {
+  width: 200px;
+  height: 20px;
+}
