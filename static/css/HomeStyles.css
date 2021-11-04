@@ -23,7 +23,7 @@ div.FeaturesAndFunctionalities{
   display: grid;
 }
 div.RightFeat{
-  
+
 }
 
 
@@ -34,6 +34,18 @@ div.RightFeat{
   text-align: center;
 
 }
+
+.FAQ-Searchbar{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 /*Styles for the pictures*/
 .calPic {
   width: 200px;
