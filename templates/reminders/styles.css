@@ -1,0 +1,9 @@
+.fc .fc-timegrid-body {
+    width: 200px;
+    height: 20px;
+}
+  
+.fc .fc-event-title-container{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
