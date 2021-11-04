@@ -36,14 +36,25 @@ div.RightFeat{
 }
 
 .FAQ-Searchbar{
-  margin: 0;
+  text-align: center;  
+}
+
+.FAQ-Searchbar .input{
+  width: 30%;
+  padding: 10px 10px;
+  border:none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.FAQ-Searchbar .searchbar{
+  margin:0;
   padding: 0;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
   outline: none;
-  padding: 10px;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
   cursor: pointer;
+}
 }
 
 /*Styles for the pictures*/
