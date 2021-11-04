@@ -63,15 +63,16 @@ div.RightFeat{
 }
 
 /*FAQ Section*/
-.RightFeat .FAQ-H1{
+.FAQ-container .FAQ-H1{
   text-align: center;
+  border:cover;
 }
 
-.RightFeat .FAQ-Searchbar{
+.FAQ-container .FAQ-Searchbar{
   text-align: center;  
 }
 
-.RightFeat .FAQ-Searchbar .input{
+.FAQ-container .FAQ-Searchbar .input{
   width: 30%;
   padding: 10px 10px;
   border:none;
@@ -79,7 +80,7 @@ div.RightFeat{
   font-weight: bold;
 }
 
-.RightFeat .FAQ-Searchbar .searchbar{
+.FAQ-container .FAQ-Searchbar .searchbar{
   margin:0;
   padding: 0;
   outline: none;
