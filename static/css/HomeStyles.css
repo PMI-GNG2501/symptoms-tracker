@@ -171,3 +171,6 @@ div.RightFeat{
   display: block;
 }
 
+.fc .fc-timegrid-body {
+  width: 200px;
+}
