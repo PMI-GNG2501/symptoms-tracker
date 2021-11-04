@@ -174,11 +174,15 @@ div.RightFeat{
 /*//////////////////////////////////////////FAQ Section Ends HERE/////////////////////////////////////*/
 
 
+
+
+/*//////////////////////////////////////////Calendar Section Starts HERE/////////////////////////////////////*/
+
 .fc .fc-timegrid-body {
   width: 200px;
   height: 20px;
 }
 
-.fc .fc-event-main-frame{
+.fc .fc-event-title-container{
   height: 25px;
 }
