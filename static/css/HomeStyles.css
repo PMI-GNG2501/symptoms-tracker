@@ -133,9 +133,8 @@ div.RightFeat{
   padding:5px;
 }
 
-#remove-outline{
+.ion-icon #remove-outline{
   display:none;
-
 }
 
 .answer{
