@@ -1,6 +1,10 @@
 *,
 *::before
-*::after
+*::after{
+  margin:0;
+  padding:0;
+  box-sizing: inherit;
+}
 
 body {
   background-color: #f4ceff;
@@ -84,8 +88,20 @@ div.RightFeat{
   cursor: pointer;
 }
 
-.RightFeat .FAQ-questions{
+.FAQ-container{
+  width:100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.FAQ-container .FAQ-questions{
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .RightFeat .FAQ-questions .Question-Category{
