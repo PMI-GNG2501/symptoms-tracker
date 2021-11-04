@@ -62,7 +62,7 @@ div.RightFeat{
   box-shadow: 5%;
 }
 
-/*FAQ Section*/
+/*////////////////////////////////////////////////////////FAQ Section/////////////////////////////////////////////////*/
 .FAQ-container{
   width:100%;
   height:100vh;
@@ -124,7 +124,7 @@ div.RightFeat{
   padding: 1rem, 0;
 }
 
-.question .plus-minus{
+.ion-icon{
   color: black;
   padding:5px;
 }
@@ -162,13 +162,20 @@ div.RightFeat{
   max-height: 20rem;
 }
 
-.Question-Category:target .question #add-outline{
+.Question-Category:target .question .ion-icon #add-outline{
   display: none;
 }
 
-.Question-Category:target .question #remove-outline{
+.Question-Category:target .question .ion-icon #remove-outline{
   display: block;
 }
+
+
+
+/*//////////////////////////////////////////FAQ Section Ends HERE/////////////////////////////////////*/
+
+
+
 
 .fc .fc-timegrid-slots {
   width: 200px;
