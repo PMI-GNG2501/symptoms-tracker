@@ -124,6 +124,10 @@ div.RightFeat{
   padding: 1rem, 0;
 }
 
+.question i{
+  color:blue;
+}
+
 .ion-icon{
   color: black;
   padding:5px;
