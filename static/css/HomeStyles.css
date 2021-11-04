@@ -115,7 +115,7 @@ div.RightFeat{
 
 .question{
   font-size: 1.6rem;
-  color:blue;
+  color:red;
   text-decoration: none;
   width:100%;
   display: flex;
@@ -124,14 +124,17 @@ div.RightFeat{
   padding: 1rem, 0;
 }
 
+.question i{
+  color:blue;
+}
+
 .ion-icon{
   color: black;
   padding:5px;
 }
 
-#remove-outline{
+.ion-icon #remove-outline{
   display:none;
-
 }
 
 .answer{
