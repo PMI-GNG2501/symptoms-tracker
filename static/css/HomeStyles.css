@@ -171,13 +171,14 @@ div.RightFeat{
 }
 
 
-
 /*//////////////////////////////////////////FAQ Section Ends HERE/////////////////////////////////////*/
 
 
-
-
-.fc .fc-timegrid-slots {
+.fc .fc-timegrid-body {
   width: 200px;
   height: 20px;
+}
+
+.fc .fc-event-main-frame{
+  height: 25px;
 }
