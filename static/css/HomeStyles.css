@@ -184,5 +184,6 @@ div.RightFeat{
 }
 
 .fc .fc-event-title-container{
-  height: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
