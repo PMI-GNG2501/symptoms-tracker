@@ -124,15 +124,14 @@ div.RightFeat{
   padding: 1rem, 0;
 }
 
-.question .Plus{
+.question .plus-minus{
   color: black;
   padding:5px;
 }
 
-.question .Minus{
+#remove-outline{
   display:none;
-  color: black;
-  padding:5px;
+
 }
 
 .answer{
@@ -163,11 +162,11 @@ div.RightFeat{
   max-height: 20rem;
 }
 
-.Question-Category:target .question .plus{
+.Question-Category:target .question #add-outline{
   display: none;
 }
 
-.Question-Category:target .question .minus{
+.Question-Category:target .question #remove-outline{
   display: block;
 }
 
