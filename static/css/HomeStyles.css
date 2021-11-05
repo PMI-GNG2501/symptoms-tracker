@@ -76,7 +76,7 @@ div.RightFeat{
 }
 
 .FAQ-container .FAQ-Searchbar{
-  text-align: center;  
+  align-items: center;  
 }
 
 .FAQ-container .FAQ-Searchbar .input{
