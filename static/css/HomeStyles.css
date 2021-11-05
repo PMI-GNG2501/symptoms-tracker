@@ -140,7 +140,7 @@ div.RightFeat{
   transition: max-height 650ms;
 }
 
-.answer::before{
+.Answer::before{
   content:"";
   position: absolute;
   width: 0.6rem;
@@ -150,13 +150,13 @@ div.RightFeat{
   transform: translatey(-50%);
 }
 
-.answer p{
+.Answer p{
   font-size: 1.4rem;
   color: black;
   padding:2rem;
 }
 
-.Question-Category:target .answer{
+.Question-Category:target .Answer{
   max-height: 20rem;
 }
 
