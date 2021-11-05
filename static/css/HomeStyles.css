@@ -114,7 +114,7 @@ div.RightFeat{
 
 .question{
   font-size: 1.6rem;
-  color:red;
+  color:blue;
   text-decoration: none;
   width:100%;
   display: flex;
@@ -135,6 +135,7 @@ div.RightFeat{
   max-height: 0;
   overflow: hidden;
   position: relative;
+  color: black;
   background-color: white;
   transition: height 650ms;
 }
@@ -155,15 +156,15 @@ div.RightFeat{
   padding:2rem;
 }
 
-.question:target .Answer{
+.Question-Category:target .Answer{
   max-height: 20rem;
 }
 
-.question .show-please:target{
+.Question-Category:target .show-please{
   display: none;
 }
 
-.question .hide-please:target{
+.Question-Category:target .hide-please{
   display: block;
 }
 
