@@ -136,7 +136,7 @@ div.RightFeat{
   overflow: hidden;
   position: relative;
   background-color: white;
-  transition: max-height 650ms;
+  transition: height 650ms;
 }
 
 .Answer::before{
@@ -159,11 +159,11 @@ div.RightFeat{
   max-height: 20rem;
 }
 
-.Question-Category:target .question .show-please{
+.Question-Category .question .show-please:target{
   display: none;
 }
 
-.Question-Category:target .question .hide-please{
+.Question-Category .question .hide-please:target{
   display: block;
 }
 
