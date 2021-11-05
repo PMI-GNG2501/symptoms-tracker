@@ -14,9 +14,12 @@
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
 
-                dayGridDay:{
-                   height: 650, 
-                },
+                views: {
+                    dayGridDay:{
+                        height: 650, 
+                    },  
+                }
+                
                 
                 initialView: 'dayGridMonth',
                 headerToolbar: {
