@@ -101,6 +101,7 @@ div.RightFeat{
   height: 100vh;
   background-color: whitesmoke;
   align-items: center;
+  justify-content: center;
 }
 
 .RightFeat .FAQ-questions .Question-Category{
@@ -113,7 +114,7 @@ div.RightFeat{
 
 .question{
   font-size: 1.6rem;
-  color:red;
+  color:blue;
   text-decoration: none;
   width:100%;
   display: flex;
@@ -123,6 +124,7 @@ div.RightFeat{
 }
 
 .question i{
+  padding: .5rem;
   color:blue;
 }
 
@@ -130,7 +132,7 @@ div.RightFeat{
   display:none;
 }
 
-.answer{
+.Answer{
   max-height: 0;
   overflow: hidden;
   position: relative;
