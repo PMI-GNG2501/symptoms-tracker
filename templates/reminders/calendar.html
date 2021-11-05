@@ -2,9 +2,7 @@
 {% block extra-head %}
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.css' rel='stylesheet'/>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/fullcalendar.print.css" media="print">
-
-    <link rel="stylesheet" href="styles.css"/>
+    <link href="../fullcalendar/fullcalendar-custom.css" rel="stylesheet">
 {% endblock %}
 {% block content %}
 
@@ -15,7 +13,11 @@
             var calendarEl = document.getElementById('calendar');
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                themeSystem: "Solar",
+
+                dayGridDay:{
+                   height: 650, 
+                },
+                
                 initialView: 'dayGridMonth',
                 headerToolbar: {
                     left: 'prev,next today',
