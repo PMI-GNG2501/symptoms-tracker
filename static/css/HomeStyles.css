@@ -160,11 +160,11 @@ div.RightFeat{
   max-height: 20rem;
 }
 
-.Question-Category:target .show-please{
+.Question-Category:target .question .show-please{
   display: none;
 }
 
-.Question-Category:target .hide-please{
+.Question-Category:target .question .hide-please{
   display: block;
 }
 
