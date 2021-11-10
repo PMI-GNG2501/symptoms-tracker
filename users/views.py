@@ -48,8 +48,10 @@ def login_view(request):
                     return redirect("/")
             else:
                 messages.error(request, "Invalid username or password.")
+                return redirect("/accounts/login")
         else:
             messages.error(request, "Invalid username or password.")
+            return redirect("/accounts/login")
     else:
         form = AuthenticationForm()
         return render(
