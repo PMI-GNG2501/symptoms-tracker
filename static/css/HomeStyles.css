@@ -1,8 +1,7 @@
 *,
-*::before
-*::after{
-  margin:0;
-  padding:0;
+*::before *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
@@ -26,19 +25,8 @@ div.LeftFeat {
   font-size: 120%;
   /*border-image: 20cm;*/
 }
-/*Grid Layout*/
-div.FeaturesAndFunctionalities{
-  display: grid;
-}
-div.RightFeat{
-
-}
-
-
 
 /*styles for texts or paragraphs*/
-
-
 
 /*Styles for the pictures*/
 .calPic {
@@ -46,6 +34,8 @@ div.RightFeat{
   height: 200px;
   border-radius: 20px;
   box-shadow: 5%;
+  position: absolute;
+  position: -100px;
 }
 
 .medPic {
@@ -63,40 +53,40 @@ div.RightFeat{
 }
 
 /*////////////////////////////////////////////////////////FAQ Section/////////////////////////////////////////////////*/
-.FAQ-container{
-  width:100%;
+.FAQ-container {
+  width: 100%;
   /*height:100vh;*/
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
-.FAQ-container .FAQ-H1{
+.FAQ-container .FAQ-H1 {
   text-align: center;
-  border:cover;
+  border: cover;
 }
 
-.FAQ-container .FAQ-Searchbar{
-  align-items: center;  
+.FAQ-container .FAQ-Searchbar {
+  align-items: center;
 }
 
-.FAQ-container .FAQ-Searchbar .input{
+.FAQ-container .FAQ-Searchbar .input {
   width: 30%;
   padding: 10px 10px;
-  border:none;
+  border: none;
   border-radius: 5px;
   font-weight: bold;
 }
 
-.FAQ-container .FAQ-Searchbar .searchbar{
-  margin:0;
+.FAQ-container .FAQ-Searchbar .searchbar {
+  margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   cursor: pointer;
 }
 
-.FAQ-container .FAQ-questions{
+.FAQ-container .FAQ-questions {
   width: 50%;
   /*height: 100vh;*/
   background-color: whitesmoke;
@@ -104,34 +94,34 @@ div.RightFeat{
   justify-content: center;
 }
 
-.Question-Category{
+.Question-Category {
   width: 100%;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  box-shadow: 0.5rem, 2px, 0.5rem rgba(0,0,0,0.1);
+  box-shadow: 0.5rem, 2px, 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.question{
+.question {
   font-size: 1.6rem;
-  color:blue;
+  color: blue;
   text-decoration: none;
-  width:100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.question i{
-  padding: .5rem;
-  color:blue;
+.question i {
+  padding: 0.5rem;
+  color: blue;
 }
 
-.question .hide-please{
-  display:none;
+.question .hide-please {
+  display: none;
 }
 
-.Answer{
+.Answer {
   max-height: 0;
   overflow: hidden;
   position: relative;
@@ -140,39 +130,35 @@ div.RightFeat{
   transition: height 650ms;
 }
 
-.Answer::before{
-  content:"";
+.Answer::before {
+  content: "";
   position: absolute;
   width: 0.6rem;
   height: 90%;
   top: 50%;
-  left:0px;
+  left: 0px;
   transform: translatey(-50%);
 }
 
-.Answer p{
+.Answer p {
   font-size: 1.4rem;
   color: black;
-  padding:2rem;
+  padding: 2rem;
 }
 
-.Question-Category:target .Answer{
+.Question-Category:target .Answer {
   max-height: 20rem;
 }
 
-.Question-Category:target .question .show-please{
+.Question-Category:target .question .show-please {
   display: none;
 }
 
-.Question-Category:target .question .hide-please{
+.Question-Category:target .question .hide-please {
   display: block;
 }
 
-
 /*//////////////////////////////////////////FAQ Section Ends HERE/////////////////////////////////////*/
-
-
-
 
 /*//////////////////////////////////////////Calendar Section Starts HERE/////////////////////////////////////*/
 
@@ -181,7 +167,7 @@ div.RightFeat{
   height: 20px;
 }
 
-.fc .fc-event-title-container{
+.fc .fc-event-title-container {
   padding-top: 45px;
   padding-bottom: 45px;
 }
