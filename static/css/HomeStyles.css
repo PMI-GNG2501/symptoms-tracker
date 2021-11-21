@@ -34,8 +34,6 @@ div.LeftFeat {
   height: 200px;
   border-radius: 20px;
   box-shadow: 5%;
-  position: absolute;
-  position: -100px;
 }
 
 .medPic {
