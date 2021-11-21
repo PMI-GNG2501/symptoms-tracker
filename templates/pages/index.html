@@ -1,193 +1,296 @@
 {% extends "layouts/layout.html" %} {% load static %} {% block content %}
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
-    />
-    <link
-            rel="stylesheet"
-            type="text/css"
-            href="{% static 'css/HomeStyles.css' %}"
-    />
-    <!--This is the search button src ↓ -->
-    <script src="https://kit.fontawesome.com/f4179f58fa.js" crossorigin="anonymous"></script>
-    <!--This is for the + and - buttons in FAQ
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/HomeStyles.css' %}"
+/>
+<!--This is the search button src ↓ -->
+<script
+  src="https://kit.fontawesome.com/f4179f58fa.js"
+  crossorigin="anonymous"
+></script>
+<!--This is for the + and - buttons in FAQ
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     -->
 
-
-    <div class="FeaturesAndFunctionalities">
-        <div class="container">
-            <div class="RightFeat">
-                <div class="row text-center py-2">
-                    <div class="col-12">
-                        <h1>Calendar</h1>
-                    </div>
-                    <div class="col-3">{% load static %}<img src="{% static 'Calendar.jpg' %}" class="calPic"/></div>
-                    <div class="col-9">
-                        <p class="CalSent">
-                            With our calendar, be on point to your medical and therapy appointments
-                            and most importantly, you won't forget to take your medication.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="LeftFeat">
-                <h1>Medication</h1>
-                <p class="PillsPhrase">
-                    Organize all of your medication simply and easily with the help of our medication application.
-                    With just the click of a button, you can add new medicaiton or remove them!
-                </p>
-                <img src="{% static 'Pills.jpg' %}" class="medPic"/>
-            </div>
-
-            <div class="RightFeat">
-                <h1>Symptoms Tracker</h1>
-                <p>
-                    Track your symptoms when ever you want and where ever you are. You'll be
-                    able to have a list of your symptoms that you had during the day.
-                </p>
-                <img src="{% static 'symptoms.jpg' %}" class="symPic"/>
-            </div>
-
-            <div class="LeftFeat">
-                <h1>PDF's</h1>
-                <p style="right: auto">
-                    Create PDF files of your medications, appointments, symptomsthat you had
-                    during the day and send them to your health practician.
-                </p>
-            </div>
+<div class="FeaturesAndFunctionalities">
+  <div class="container">
+    <div class="RightFeat">
+      <div class="row text-center py-2">
+        <div class="col-12">
+          <h1>Calendar</h1>
         </div>
-
-        <div class="RightFeat">
-            <section>
-                <br>
-                <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
-                <p class="text-center mb-5">
-                    Find the answers for the most frequently asked questions below!
-                </p>
-
-                <div class="row m-0">
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <h6 class="mb-3 text-primary text-center"><i class="far fa-paper-plane text-primary pe-2"></i> Where are we
-                            operational? </h6>
-                        <p>Currently our services are available in </p>
-                        <ul> <!--This is just placeholder for now, I don't know how we want to organize this-->
-                            <li>Ottawa, Ontario, Canada</li>
-                            <li>Toronto, Ontario, Canada</li>
-                            <li>Montreal, Quebec, Canada</li>
-                        </ul>
-                        <p>We are working on getting our services online in many other cities</p>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <h6 class="mb-3 text-primary text-center"><i class="fas fa-pen-alt text-primary pe-2"></i>When can I cancel
-                            my subscription?</h6>
-                        <p>
-                            You can cancel your subscription anytime! Once you cancel our services, you will stop paying
-                            by the next billing cycle.
-                        </p>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <h6 class="mb-3 text-primary text-center"><i class="fas fa-user text-primary pe-2"></i> What type of payment
-                            options do we offer?</h6>
-                        <p>
-                            Currently, we only offer monthly subscription. You can upgrade or cancel your monthly
-                            account at any time with no further obligation.
-                        </p>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <h6 class="mb-3 text-primary text-center"><i class="fas fa-rocket text-primary pe-2"></i> Data Collection
-                            policy</h6>
-                        <p>
-                            We have a very strict no data collection policy on all of our services. Since we are working
-                            with sensitive information we believe it is imperative to not have them stored on our cloud.
-                            However so, it is possible for you to download our reports manually onto your device for
-                            your own safe keeping.
-                        </p>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <h6 class="mb-3 text-primary text-center"><i class="fas fa-home text-primary pe-2"></i> Return Policy
-                        </h6>
-                        <p>If you wish to obtain a refund, please contact our support team and we will be happy to
-                            assist you.</p>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <h6 class="mb-3 text-primary text-center"><i class="fas fa-book-open text-primary pe-2"></i> Will we be
-                            adding more features later on?</h6>
-                        <p>
-                            Of course! This is an ever developing project, we will be sure to add new features in the
-                            future to accomodate to user feedback as well as popular demand.
-                        </p>
-                    </div>
-                </div>
-            </section>
+        <div class="col-3">
+          {% load static %}<img
+            src="{% static 'Calendar.jpg' %}"
+            class="calPic"
+          />
         </div>
-
-        <div class="LeftFeat">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="title col-12 col-lg-8">
-                        <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
-                            CONTACT US</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="media-container-column col-lg-8" data-form-type="formoid">
-
-                        <div data-form-alert="" hidden="">
-                            Thanks for filling out the form!
-                        </div>
-
-                        <form class="mbr-form" action="#"
-                              data-form-title="Mobirise Form">
-                            <input type="hidden" data-form-email="true"
-                                                                     value="R46ImfT8lRYLhZq6vpVE63L0V35bOdmwHjgn18Tp/HdDujD3JfWe/8bm7YjE2vjZZ7JFQMRNRIinYQUh3aNa2qi1GshxArFhHAffNuiFsZiNLfMCF8KElmS7V7lbqBIL">
-                            <div class="row row-sm-offset">
-                                <div class="col-md-4 multi-horizontal" data-for="name">
-                                    <div class="form-group">
-                                        <label class="form-control-label mbr-fonts-style display-7" for="name-form1-4">Name</label>
-                                        <input type="text" class="form-control" name="name" data-form-field="Name"
-                                               required="" id="name-form1-4">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 multi-horizontal" data-for="email">
-                                    <div class="form-group">
-                                        <label class="form-control-label mbr-fonts-style display-7" for="email-form1-4">Email</label>
-                                        <input type="email" class="form-control" name="email" data-form-field="Email"
-                                               required="" id="email-form1-4">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 multi-horizontal" data-for="phone">
-                                    <div class="form-group">
-                                        <label class="form-control-label mbr-fonts-style display-7" for="phone-form1-4">Phone</label>
-                                        <input type="tel" class="form-control" name="phone" data-form-field="Phone"
-                                               id="phone-form1-4">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group" data-for="message">
-                                <label class="form-control-label mbr-fonts-style display-7" for="message-form1-4">Message</label>
-                                <textarea type="text" class="form-control" name="message" rows="7"
-                                          data-form-field="Message" id="message-form1-4"></textarea>
-                            </div>
-                            <br>
-                            <span class="input-group-btn"><button type="submit" class="btn btn-outline-dark">SEND FORM</button></span>
-                        </form>
-
-                        <br>
-                    </div>
-                </div>
-            </div>
+        <div class="col-9">
+          <p class="CalSent">
+            With our calendar, be on point to your medical and therapy
+            appointments and most importantly, you won't forget to take your
+            medication.
+          </p>
         </div>
-
-        <div class="RightFeat"></div>
+      </div>
     </div>
+
+    <div class="LeftFeat">
+      <div class="row text-center py-2">
+        <div class="col-12">
+          <h1>Medication</h1>
+        </div>
+        <div class="col-3">
+          <img src="{% static 'Pills.jpg' %}" class="medPic" />
+        </div>
+        <div class="col-9">
+          <p class="PillsPhrase">
+            Organize all of your medication simply and easily with the help of
+            our medication application. With just the click of a button, you can
+            add new medicaiton or remove them!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="RightFeat">
+      <div class="row text-center py-2">
+        <div class="col-12">
+          <h1>Symptoms Tracker</h1>
+        </div>
+        <div class="col-3">
+          <img src="{% static 'symptoms.jpg' %}" class="symPic" />
+        </div>
+        <div class="col-9">
+          <p>
+            Track your symptoms when ever you want and where ever you are.
+            You'll be able to have a list of your symptoms that you had during
+            the day.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="LeftFeat">
+      <div class="row text-center py-2">
+        <div class="col-12">
+          <h1>PDF's</h1>
+        </div>
+        <div class="col-12">
+          <p style="right: auto">
+            Create PDF files of your medications, appointments, symptoms that
+            you had during the day and send them to your health practician.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="RightFeat">
+    <section>
+      <br />
+      <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
+      <p class="text-center mb-5">
+        Find the answers for the most frequently asked questions below!
+      </p>
+
+      <div class="row m-0">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-primary text-center">
+            <i class="far fa-paper-plane text-primary pe-2"></i> Where are we
+            operational?
+          </h6>
+          <p>Currently our services are available in</p>
+          <ul>
+            <!--This is just placeholder for now, I don't know how we want to organize this-->
+            <li>Ottawa, Ontario, Canada</li>
+            <li>Toronto, Ontario, Canada</li>
+            <li>Montreal, Quebec, Canada</li>
+          </ul>
+          <p>
+            We are working on getting our services online in many other cities
+          </p>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-primary text-center">
+            <i class="fas fa-pen-alt text-primary pe-2"></i>When can I cancel my
+            subscription?
+          </h6>
+          <p>
+            You can cancel your subscription anytime! Once you cancel our
+            services, you will stop paying by the next billing cycle.
+          </p>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-primary text-center">
+            <i class="fas fa-user text-primary pe-2"></i> What type of payment
+            options do we offer?
+          </h6>
+          <p>
+            Currently, we only offer monthly subscription. You can upgrade or
+            cancel your monthly account at any time with no further obligation.
+          </p>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-primary text-center">
+            <i class="fas fa-rocket text-primary pe-2"></i> Data Collection
+            policy
+          </h6>
+          <p>
+            We have a very strict no data collection policy on all of our
+            services. Since we are working with sensitive information we believe
+            it is imperative to not have them stored on our cloud. However so,
+            it is possible for you to download our reports manually onto your
+            device for your own safe keeping.
+          </p>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-primary text-center">
+            <i class="fas fa-home text-primary pe-2"></i> Return Policy
+          </h6>
+          <p>
+            If you wish to obtain a refund, please contact our support team and
+            we will be happy to assist you.
+          </p>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <h6 class="mb-3 text-primary text-center">
+            <i class="fas fa-book-open text-primary pe-2"></i> Will we be adding
+            more features later on?
+          </h6>
+          <p>
+            Of course! This is an ever developing project, we will be sure to
+            add new features in the future to accomodate to user feedback as
+            well as popular demand.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="LeftFeat">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="title col-12 col-lg-8">
+          <h2
+            class="
+              mbr-section-title
+              align-center
+              pb-3
+              mbr-fonts-style
+              display-2
+            "
+          >
+            CONTACT US
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="media-container-column col-lg-8" data-form-type="formoid">
+          <div data-form-alert="" hidden="">
+            Thanks for filling out the form!
+          </div>
+
+          <form class="mbr-form" action="#" data-form-title="Mobirise Form">
+            <input
+              type="hidden"
+              data-form-email="true"
+              value="R46ImfT8lRYLhZq6vpVE63L0V35bOdmwHjgn18Tp/HdDujD3JfWe/8bm7YjE2vjZZ7JFQMRNRIinYQUh3aNa2qi1GshxArFhHAffNuiFsZiNLfMCF8KElmS7V7lbqBIL"
+            />
+            <div class="row row-sm-offset">
+              <div class="col-md-4 multi-horizontal" data-for="name">
+                <div class="form-group">
+                  <label
+                    class="form-control-label mbr-fonts-style display-7"
+                    for="name-form1-4"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    data-form-field="Name"
+                    required=""
+                    id="name-form1-4"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 multi-horizontal" data-for="email">
+                <div class="form-group">
+                  <label
+                    class="form-control-label mbr-fonts-style display-7"
+                    for="email-form1-4"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    data-form-field="Email"
+                    required=""
+                    id="email-form1-4"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 multi-horizontal" data-for="phone">
+                <div class="form-group">
+                  <label
+                    class="form-control-label mbr-fonts-style display-7"
+                    for="phone-form1-4"
+                    >Phone</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="phone"
+                    data-form-field="Phone"
+                    id="phone-form1-4"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group" data-for="message">
+              <label
+                class="form-control-label mbr-fonts-style display-7"
+                for="message-form1-4"
+                >Message</label
+              >
+              <textarea
+                type="text"
+                class="form-control"
+                name="message"
+                rows="7"
+                data-form-field="Message"
+                id="message-form1-4"
+              ></textarea>
+            </div>
+            <br />
+            <span class="input-group-btn"
+              ><button type="submit" class="btn btn-outline-dark">
+                SEND FORM
+              </button></span
+            >
+          </form>
+
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="RightFeat"></div>
+</div>
 
 {% endblock content %}
