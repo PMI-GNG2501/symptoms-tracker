@@ -27,7 +27,10 @@ div.LeftFeat {
 }
 
 /*styles for texts or paragraphs*/
-
+.col-9 {
+  text-align: justify;
+  text-justify: inter-word;
+}
 /*Styles for the pictures*/
 .calPic {
   width: 200px;
