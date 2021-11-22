@@ -30,22 +30,22 @@ div.LeftFeat {
 
 /*Styles for the pictures*/
 .calPic {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 20px;
   box-shadow: 5%;
 }
 
 .medPic {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 20px;
   box-shadow: 5%;
 }
 
 .symPic {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 20px;
   box-shadow: 5%;
 }
