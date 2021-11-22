@@ -13,7 +13,7 @@ body {
 div.RightFeat {
   font-family: "Raleway", sans-serif;
   border: cover;
-  background-color: #f0baff;
+  background-color: #f4ceff;
   font-size: 120%;
   /* border-image: 20cm;*/
 }
@@ -21,7 +21,7 @@ div.RightFeat {
 /*Every LeftFeat element*/
 div.LeftFeat {
   font-family: "Raleway", sans-serif;
-  background-color: #f0baff;
+  background-color: #f4ceff;
   font-size: 120%;
   /*border-image: 20cm;*/
 }
