@@ -29,6 +29,8 @@ div.LeftFeat {
 /*styles for texts or paragraphs*/
 .Paragraph {
   text-align: justify;
+  position: relative;
+  bottom: -30px;
 }
 /*Styles for the pictures*/
 .calPic {
