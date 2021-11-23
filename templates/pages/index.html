@@ -21,17 +21,17 @@
   <div class="container">
     <div class="RightFeat">
       <div class="row text-center py-2 align-center">
-        <div class="col-12">
+        <div class="col-md-12">
           <h1>Calendar</h1>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
           {% load static %}<img
             src="{% static 'Calendar.jpg' %}"
             class="calPic"
           />
         </div>
-        <div class="col-7">
-          <p class="Paragraph0">
+        <div class="col-md-7 paragraph">
+          <p>
             With our calendar, be on point to your medical and therapy
             appointments and most importantly, you won't forget to take your
             medication on time. You also have the option to see your calendar in
@@ -39,6 +39,7 @@
             your calendar. Furthermore, you'll receive notifications by mail.
           </p>
         </div>
+        <div class="col-md-1"></div>
       </div>
     </div>
 
@@ -47,9 +48,12 @@
         <div class="col-12">
           <h1>Medication</h1>
         </div>
-        <div class="col-1"></div>
-        <div class="col-7">
-          <p class="Paragraph1">
+        <div class="col-md-1 d-none d-md-none d-lg-block"></div>
+        <div class="col-md-4 d-lg-none">
+          <img src="{% static 'Pills.jpg' %}" class="medPic" />
+        </div>
+        <div class="col-md-7 paragraph">
+          <p>
             Organize all of your medication simply and easily with the help of
             our medication feature. With just the click of a button, you can
             store by adding new medicaiton or forget by removing them! This will
@@ -57,7 +61,7 @@
             them.
           </p>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 d-none d-md-none d-lg-block">
           <img src="{% static 'Pills.jpg' %}" class="medPic" />
         </div>
       </div>
@@ -65,28 +69,29 @@
 
     <div class="RightFeat">
       <div class="row text-center py-2">
-        <div class="col-12">
+        <div class="col-md-12">
           <h1>Symptoms Tracker</h1>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
           <img src="{% static 'symptoms.jpg' %}" class="symPic" />
         </div>
-        <div class="col-7">
-          <p class="Paragraph2">
+        <div class="col-md-7 paragraph">
+          <p>
             Track your symptoms whenever you want and wherever you are. You'll
             be able to have a list of your symptoms that you had during the day.
             This will allow you to stay updated on your symptoms.
           </p>
         </div>
+        <div class="col-md-1"></div>
       </div>
     </div>
 
     <div class="LeftFeat">
       <div class="row text-center py-2">
-        <div class="col-12">
+        <div class="col-md-12">
           <h1>PDF's</h1>
         </div>
-        <div class="col-12 text-center">
+        <div class="col-md-12 text-center">
           <p style="right: auto">
             Create PDF files of your medications, appointments, symptoms that
             you had during the day and send them to your health practician. It's

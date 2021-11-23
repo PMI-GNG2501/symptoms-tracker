@@ -27,40 +27,30 @@ div.LeftFeat {
 }
 
 /*styles for texts or paragraphs*/
-.Paragraph0 {
+.paragraph {
+  display: flex;
+  align-items: center;
   text-align: justify;
-  position: relative;
-  bottom: -50px;
-}
-.Paragraph1 {
-  text-align: justify;
-  position: relative;
-  bottom: -55px;
-}
-.Paragraph2 {
-  text-align: justify;
-  position: relative;
-  bottom: -90px;
 }
 
 /*Styles for the pictures*/
 .calPic {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 150px;
   box-shadow: 5%;
 }
 
 .medPic {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 150px;
   box-shadow: 5%;
 }
 
 .symPic {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 150px;
   box-shadow: 5%;
 }
